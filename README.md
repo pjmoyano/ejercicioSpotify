@@ -1,2 +1,3 @@
-# ejercicioSpotify
-Ejercicio para aprender a programar
+# Ejercicio Spotify
+
+Con este programa queremos saber cuantas veces escucharon las canciones de determinado artista.

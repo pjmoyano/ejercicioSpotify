@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class application {
     public static void main(String args[]) {
+
         System.out.println("***********************************************");
         System.out.println("EJERCICIO 1");
         System.out.println("**********************************");
@@ -7,9 +10,16 @@ public class application {
         /*
         Si la suma de dos numeros da un resultado mayor a 10 mostrar el mensaje "Es mayor a diez"
         ----------------------------------------------------------------------------*/
-        int resultado = 8+3;
+        int a;
+        int b;
 
-        if (resultado > 10) {
+        System.out.println("Ingrese el primer numero: ");
+        a = ingresarNumero();
+        System.out.println("Ingrese el segundo numero: ");
+        b = ingresarNumero();
+
+
+        if ((a+b) > 10) {
             System.out.println("es mayor a 10");
         }
 
@@ -68,5 +78,9 @@ public class application {
 
     }
 
-
+    public static int ingresarNumero() {
+        Scanner entradaEscaner = new Scanner (System.in);
+        String numero = entradaEscaner.nextLine();
+        return  Integer.parseInt(numero);
+     }
 }

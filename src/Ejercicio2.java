@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ejercicio2 {
     /*
          Ingrese por teclado dos valores enteros que uno sera base y otro altura que representaran la base y
@@ -15,5 +17,11 @@ public class Ejercicio2 {
 
         // Aqui  muestro el resultado final
 
+    }
+
+    public static int ingresarNumero() {
+        Scanner entradaEscaner = new Scanner (System.in);
+        String numero = entradaEscaner.nextLine();
+        return  Integer.parseInt(numero);
     }
 }

@@ -11,12 +11,20 @@ public class Ejercicio1 {
     public static void main(String args[]) {
         // Aqui declaro las variables que voy a utilizar e ingreso por teclado si hace falta
 
+        int base;
+        int altura;
+
+        System.out.println("Ingrese el primer numero: ");
+        base = ingresarNumero();
+        System.out.println("Ingrese el segundo numero: ");
+        altura = ingresarNumero();
 
         // Aqui agrego la logica
 
+        int area = base * altura;
 
         // Aqui  muestro el resultado final
-
+        System.out.println("El cuadrado de base:" +base+ " y altura:" +altura+ " tiene un area de "+ base*altura);
     }
 
     public static int ingresarNumero() {

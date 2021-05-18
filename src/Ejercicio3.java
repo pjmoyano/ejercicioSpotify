@@ -12,11 +12,31 @@ public class Ejercicio3 {
      */
 
     public static void main(String args[]) {
+
         // Aqui declaro las variables que voy a utilizar e ingreso por teclado si hace falta
 
+        int a;
+        int b;
+        int c;
+
+        System.out.println("Ingrese el primer numero: ");
+        a = ingresarNumero();
+        System.out.println("Ingrese el segundo numero: ");
+        b = ingresarNumero();
+        System.out.println("Ingrese el segundo numero: ");
+        c = ingresarNumero();
 
         // Aqui agrego la logica
 
+        if (a>b && a>c) {
+            System.out.println("el mayor numero es " + a);
+        }
+        if (b>a && b>c) {
+            System.out.println("el mayor numero es " + b);
+        }
+        if (c>a && c>b) {
+            System.out.println("el mayor numero es " + c);
+        }
 
         // Aqui  muestro el resultado final
     }

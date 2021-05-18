@@ -24,7 +24,7 @@ public class Ejercicio1 {
         int area = base * altura;
 
         // Aqui  muestro el resultado final
-        System.out.println("El cuadrado de base:" +base+ " y altura:" +altura+ " tiene un area de "+ base*altura);
+        System.out.println("El cuadrado de base:" +base+ " y altura:" +altura+ " tiene un area de "+ area);
     }
 
     public static int ingresarNumero() {

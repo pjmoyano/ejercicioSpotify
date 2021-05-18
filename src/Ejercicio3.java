@@ -37,6 +37,9 @@ public class Ejercicio3 {
         if (c>a && c>b) {
             System.out.println("el mayor numero es " + c);
         }
+        if (a==b && b==c) {
+            System.out.println("todos son el mayor numero");
+        }
 
         // Aqui  muestro el resultado final
     }

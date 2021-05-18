@@ -40,6 +40,18 @@ public class Ejercicio3 {
         if (a==b && b==c) {
             System.out.println("todos son el mayor numero");
         }
+        if (a==b) {
+            System.out.println("hay dos opciones que son el mayor numero: " +a+ " y " +b);
+        }
+        if (b==c) {
+            System.out.println("hay dos opciones que son el mayor numero: "+b+ " y " +c);
+        }
+        if (a==c) {
+            System.out.println("hay dos opciones que son el mayor numero: " +a+ " y " +c);
+        }
+
+
+
 
         // Aqui  muestro el resultado final
     }

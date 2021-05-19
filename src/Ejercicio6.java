@@ -22,15 +22,25 @@ public class Ejercicio6 {
         int promedioFinal = 10;
 
         for (int i=0; i<10; i++) {
-            System.out.println("Ingrese el numero "+i+":");
+            System.out.println("Ingrese el promedio numero "+i+":"); //Aqui le agrego que lo que vamos a ingresar es un promedio asi tiene mas magia
             promedios[i] = ingresarNumero();
         }
 
         // Aqui agrego la logica
+        /* Esto estaba asi:
         for (int i=0; i<10; i++) {
             sumatoriaDePromedios = sumatoriaDePromedios + promedios[i];
             promedioFinal = sumatoriaDePromedios / 10;
         }
+        */
+
+        for (int i=0; i<10; i++) {
+            sumatoriaDePromedios = sumatoriaDePromedios + promedios[i];
+        }
+        promedioFinal = sumatoriaDePromedios / 10; //a esta linea la sacamos del for ¿Por que?
+        //Al promedio final solo lo necesitamos calcular una vez, antes lo calculabamos 10 veces.
+        //Igual funcionaba porque el ultimo es el que queda guardado
+
         // Aqui  muestro el resultado final
 
         if (promedioFinal > 7) {

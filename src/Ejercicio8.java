@@ -25,14 +25,47 @@ public class Ejercicio8 {
 
     public static void main(String args[]) {
 
+        int[] temperaturas = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int meses = 12;
+        int menorTemperatura = 0;
+        int mayorTemperatura = 0;
 
+        for (int i = 0; i < 12; i++) {
+            System.out.println("Ingrese la temperatura " + i + ":");
+            temperaturas[i] = ingresarNumero();
+        }
 
+        menorTemperatura = calcularMenorTemperatura(temperaturas);
+        mayorTemperatura = calcularMayorTemperatura(temperaturas);
+
+        System.out.println("La mayor temperatura es: "+mayorTemperatura);
+        System.out.println("La menor temperatura es: "+menorTemperatura);
     }
 
+    private static int calcularMayorTemperatura(int[] temperaturas) {
+        int mayor = -100;
+        for (int i = 0; i < 12; i++) {
+            if (temperaturas[i] > mayor) {
+                mayor = temperaturas[i];
+            }
+        }
+        return mayor;
+    }
+
+    private static int calcularMenorTemperatura(int[] temperaturas) {
+        int menor = 100;
+        for (int i = 0; i < 12; i++) {
+            if (temperaturas[i] < menor) {
+                menor = temperaturas[i];
+            }
+        }
+        return menor;
+    }
 
     public static int ingresarNumero() {
-        Scanner entradaEscaner = new Scanner (System.in);
+        Scanner entradaEscaner = new Scanner(System.in);
         String numero = entradaEscaner.nextLine();
-        return  Integer.parseInt(numero);
+        return Integer.parseInt(numero);
     }
+
 }

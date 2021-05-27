@@ -29,21 +29,25 @@ public class Ejercicio5 {
         c = ingresarNumero();
 
         // Aqui agrego la logica
-        if (a<b) {
-            if (a<c) {
-                menor = a;
-            } else {
-                menor = c;
-            }
-        } else if(b < c) {
-            menor = b;
-        } else {
-            menor = c;
-        }
+        menor = calcularElMenorDeTresNumeros(a,b,c);
 
         // Aqui  muestro el resultado final
         System.out.println("el menor numero es " + menor);
 
+    }
+
+    public static int calcularElMenorDeTresNumeros(int numero1, int numero2, int numero3) {
+        if (numero1<numero2) {
+            if (numero1<numero3) {
+                return numero1;
+            } else {
+                return numero3;
+            }
+        } else if(numero2 < numero3) {
+            return numero2;
+        } else {
+            return numero3;
+        }
     }
 
     public static int ingresarNumero() {

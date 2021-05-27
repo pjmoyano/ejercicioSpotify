@@ -10,44 +10,24 @@ public class Ejercicio4 {
 
     public static void main(String args[]) {
         // Aqui declaro las variables que voy a utilizar e ingreso por teclado si hace falta
-        int a;
-        int b;
-        int c;
-        int d;
-        int e;
-        int f;
-        int g;
-        int h;
-        int i;
-        int j;
-        System.out.println("Ingrese el primer numero: ");
-        a = ingresarNumero();
-        System.out.println("Ingrese el segundo numero: ");
-        b = ingresarNumero();
-        System.out.println("Ingrese el primer numero: ");
-        c = ingresarNumero();
-        System.out.println("Ingrese el segundo numero: ");
-        d = ingresarNumero();
-        System.out.println("Ingrese el primer numero: ");
-        e = ingresarNumero();
-        System.out.println("Ingrese el segundo numero: ");
-        f = ingresarNumero();
-        System.out.println("Ingrese el primer numero: ");
-        g = ingresarNumero();
-        System.out.println("Ingrese el segundo numero: ");
-        h = ingresarNumero();
-        System.out.println("Ingrese el primer numero: ");
-        i = ingresarNumero();
-        System.out.println("Ingrese el segundo numero: ");
-        j = ingresarNumero();
+        int[] numeros = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        int resultadoSuma = 0;
+        int CantidadNumeros= 10;
+
+        for (int i = 0; i < CantidadNumeros; i++) {
+            System.out.println("Ingrese el numero " + i + ":");
+            numeros[i] = ingresarNumero();
+        }
 
         // Aqui agrego la logica
-        int resultadoSuma = (a+b+c+d+e+f+g+h+i+j);
+        for (int i=0; i<10; i++) {
+             resultadoSuma= resultadoSuma + numeros[i];
+        }
         if (resultadoSuma > 100) {
-            System.out.println("Haz superado el 100 por ciento");
+            System.out.println("Tu resultado es de: " + resultadoSuma+ " Haz superado el 100 por ciento");
         }
         else if (resultadoSuma < 100) {
-            System.out.println("No haz superado el 100 por ciento");
+            System.out.println("Tu resultado es de: " + resultadoSuma+ " No haz superado el 100 por ciento");
         }
 
 

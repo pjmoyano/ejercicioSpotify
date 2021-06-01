@@ -29,17 +29,71 @@ public class Ejercicio8 {
         int meses = 12;
         int menorTemperatura = 0;
         int mayorTemperatura = 0;
+        int mesMasCaluroso= 0;
+        int mesMasFrio = 0;
 
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < meses; i++) {
             System.out.println("Ingrese la temperatura " + i + ":");
             temperaturas[i] = ingresarNumero();
         }
 
         menorTemperatura = calcularMenorTemperatura(temperaturas);
         mayorTemperatura = calcularMayorTemperatura(temperaturas);
+        mesMasCaluroso = calcularMesMasCaluroso (temperaturas, mayorTemperatura);
+        mesMasFrio = calcularMesMasFrio (temperaturas, menorTemperatura);
 
-        System.out.println("La mayor temperatura es: "+mayorTemperatura);
-        System.out.println("La menor temperatura es: "+menorTemperatura);
+        System.out.println("La mayor temperatura es: "+mayorTemperatura+ " y fue en el mes: "+getMes(mesMasCaluroso));
+        System.out.println("La menor temperatura es: "+menorTemperatura+ " y fue en el mes: "+getMes(mesMasFrio));
+    }
+
+    private static String getMes(int mes) {
+        String mesFinal = "";
+        if (mes == 0) {
+            mesFinal = "Enero";
+        }
+        if (mes == 1) {
+            mesFinal = "Febrero";
+        }
+        if (mes == 2) {
+            mesFinal = "Marzo";
+        }
+        if (mes == 3) {
+            mesFinal = "Abril";
+        }
+        if (mes == 4) {
+            mesFinal = "Mayo";
+        }
+        if (mes == 5) {
+            mesFinal = "Junio";
+        }
+        if (mes == 6) {
+            mesFinal = "Julio";
+        }
+        if (mes == 7) {
+            mesFinal = "Agosto";
+        }
+        if (mes == 8) {
+            mesFinal = "Septiembre";
+        }
+        if (mes == 9) {
+            mesFinal = "Octubre";
+        }
+        if (mes == 10) {
+            mesFinal = "Noviembre";
+        }
+        if (mes == 11) {
+            mesFinal = "Diciembre";
+        }
+        return mesFinal;
+    }
+
+    private static int calcularMesMasCaluroso (int[] temperaturas, int mayorTemperatura) {
+        for (int i = 0; i < 12; i++) {
+           if (temperaturas[i] == mayorTemperatura) {
+               return i;
+           }
+        }
+        return 0;
     }
 
     private static int calcularMayorTemperatura(int[] temperaturas) {
@@ -50,6 +104,15 @@ public class Ejercicio8 {
             }
         }
         return mayor;
+    }
+
+    private static int calcularMesMasFrio (int[] temperaturas, int menorTemperatura) {
+        for (int i = 0; i < 12; i++) {
+            if (temperaturas[i] == menorTemperatura) {
+                return i;
+            }
+        }
+        return 0;
     }
 
     private static int calcularMenorTemperatura(int[] temperaturas) {

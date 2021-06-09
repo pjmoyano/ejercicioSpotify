@@ -48,42 +48,45 @@ public class Ejercicio8 {
 
     private static String getMes(int mes) {
         String mesFinal = "";
-        if (mes == 0) {
-            mesFinal = "Enero";
+        switch(mes) {
+            case 0:
+                mesFinal = "Enero";
+                break;
+            case 1:
+                mesFinal = "Febrero";
+                break;
+            case 2:
+                mesFinal = "Marzo";
+                break;
+            case 3:
+                mesFinal = "Abril";
+                break;
+            case 4:
+                mesFinal = "Mayo";
+                break;
+            case 5:
+                mesFinal = "Junio";
+                break;
+            case 6:
+                mesFinal = "Julio";
+                break;
+            case 7:
+                mesFinal = "Agosto";
+                break;
+            case 8:
+                mesFinal = "Septiembre";
+                break;
+            case 9:
+                mesFinal = "Octubre";
+                break;
+            case 10:
+                mesFinal = "Noviembre";
+                break;
+            case 11:
+                mesFinal = "Diciembre";
+                break;
         }
-        if (mes == 1) {
-            mesFinal = "Febrero";
-        }
-        if (mes == 2) {
-            mesFinal = "Marzo";
-        }
-        if (mes == 3) {
-            mesFinal = "Abril";
-        }
-        if (mes == 4) {
-            mesFinal = "Mayo";
-        }
-        if (mes == 5) {
-            mesFinal = "Junio";
-        }
-        if (mes == 6) {
-            mesFinal = "Julio";
-        }
-        if (mes == 7) {
-            mesFinal = "Agosto";
-        }
-        if (mes == 8) {
-            mesFinal = "Septiembre";
-        }
-        if (mes == 9) {
-            mesFinal = "Octubre";
-        }
-        if (mes == 10) {
-            mesFinal = "Noviembre";
-        }
-        if (mes == 11) {
-            mesFinal = "Diciembre";
-        }
+
         return mesFinal;
     }
 

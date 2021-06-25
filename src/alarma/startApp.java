@@ -27,9 +27,19 @@ public class startApp {
     public static void main(String args[]) {
         Alarma alarma = new Alarma();
 
+        System.out.println("Alarma activada: ");
+        alarma.setActivada(ingresarNumero());
+
+        System.out.println("Ingrese una hora: ");
+        alarma.setHora(ingresarNumero());
+
         if (alarma.getActivada() == 1) {
-            alarma.sonarAlarma();
+            //aca sabemos que la alarma esta activada
+            if (alarma.getHora() >= 22 || alarma.getHora() <= 6) {
+                    System.out.println(alarma.sonarAlarma());
+            }
         }
+        //aca esta desactivada, y cuando esta desactivada no queremos hacer nada
 
     }
 

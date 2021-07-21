@@ -27,12 +27,7 @@ public class Ejercicio6 {
         }
 
         // Aqui agrego la logica
-        /* Esto estaba asi:
-        for (int i=0; i<10; i++) {
-            sumatoriaDePromedios = sumatoriaDePromedios + promedios[i];
-            promedioFinal = sumatoriaDePromedios / 10;
-        }
-        */
+
 
         for (int i=0; i<10; i++) {
             sumatoriaDePromedios = sumatoriaDePromedios + promedios[i];
@@ -44,9 +39,9 @@ public class Ejercicio6 {
         // Aqui  muestro el resultado final
 
         if (promedioFinal > 7) {
-            System.out.println("Tu promedio es: "+promedioFinal+ " Estas listo para la universidad");
+            System.out.println("Tu promedio es: "+promedioFinal+ " . Estas listo para la universidad");
         } else if (promedioFinal < 7) {
-            System.out.println("Tu promedio es: "+promedioFinal+ " Necesitas mejorar antes de ir a la universidad");
+            System.out.println("Tu promedio es: "+promedioFinal+ " . Necesitas mejorar antes de ir a la universidad");
         }
     }
 

@@ -17,11 +17,11 @@ public class Ejercicio1 {
         // Aqui declaro las variables que voy a utilizar e ingreso por teclado si hace falta
 
         int edad = 0;
+        String nombre = "";
 
         System.out.println("Ingresa tu edad: ");
         edad = ingresarNumero();
 
-        String nombre = "";
 
         System.out.println("Ingresa tu nombre: ");
         nombre = ingresarPalabra();
